@@ -1,0 +1,158 @@
+/* definindo variaveis no css para receber cores */
+:root {
+  --color-primary: #3581a7;
+}
+
+/* Daqui pra baixo é a estilização do Menu */
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #fff0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+  text-align: center;
+  animation-name: sideNavTrasitionHide;
+  animation-duration: 1s;
+}
+
+@keyframes sideNavTrasitionHide {
+  from {
+    background-color: #fffffff7;
+  }
+
+  to {
+    background-color: #fff0;
+  }
+}
+
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #b8b8b8;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+  color: #4f4f4f;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openBtn {
+  color: var(--color-primary);
+}
+
+
+/* ### INICIO SIDENAV FULL ### */
+.sidenavFull {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #fffffff7;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+  text-align: center;
+  animation-name: sideNavTrasition;
+  animation-duration: 1s;
+}
+
+@keyframes sideNavTrasition {
+  from {
+    background-color: #fff0;
+  }
+
+  to {
+    background-color: #fffffff7;
+  }
+}
+
+.sidenavFull a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenavFull a:hover {
+  color: var(--color-primary)
+}
+
+.sidenavFull .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* ### FIM SIDENAV FULL ### */
+
+
+/* ### INICIO MAIN HIDE ### */
+.main {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fffffff7;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+  animation-name: sideNavTrasitionMain;
+
+
+}
+
+@keyframes sideNavTrasitionMain {
+  from {
+    background-color: #fffffff7;
+  }
+
+  to {
+    background-color: #fff0;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
